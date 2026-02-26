@@ -1,0 +1,74 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                     📚 COMO FAZER PUSH NO GIT (Fácil!)                        ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+✅ JÁ FIZEMOS O PUSH! Seus arquivos estão no GitHub!
+
+═════════════════════════════════════════════════════════════════════════════════
+
+📝 PRÓXIMAS VEZES (quando você alterar algo):
+
+PASSO 1 - Abra o Terminal na pasta do projeto
+  └─ cd "c:\Users\Sond'Play\Downloads\betengine (1)"
+
+PASSO 2 - Veja o status
+  └─ git status
+  └─ (vai mostrar quais arquivos mudaram)
+
+PASSO 3 - Adicione os arquivos
+  └─ git add .
+  └─ (o ponto = todos os arquivos)
+
+PASSO 4 - Faça o commit
+  └─ git commit -m "Descrição do que mudou"
+  └─ Ex: git commit -m "Corrigir bug do login"
+
+PASSO 5 - Faça o push
+  └─ git push origin main
+
+═════════════════════════════════════════════════════════════════════════════════
+
+⚡ FORMA RÁPIDA (1 linha):
+
+  git add . && git commit -m "Suas alterações" && git push origin main
+
+═════════════════════════════════════════════════════════════════════════════════
+
+💡 DICAS:
+
+1. Mensagem do commit: Seja descritivo!
+   ✓ "Adicionar nova página de perfil"
+   ✗ "Alterações"
+
+2. Se der erro de conflito:
+   → Relax, é normal quando trabalha em equipe
+   → Resolva o conflito editando o arquivo
+   → git add .
+   → git commit -m "Resolver conflito"
+   → git push
+
+3. Ver histórico:
+   → git log
+   → (mostra todos os commits anteriores)
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🎯 FLUXO COMPLETO:
+
+  1. Você edita um arquivo (ex: Auth.tsx)
+  2. git add .
+  3. git commit -m "Corrigir auth"
+  4. git push origin main
+  5. GitHub recebe a alteração
+  6. Vercel detecta e faz deploy automático!
+
+═════════════════════════════════════════════════════════════════════════════════
+
+✨ SIMPLES ASSIM!
+
+Toda vez que você quer salvar suas alterações no GitHub, é sempre:
+  1. add
+  2. commit
+  3. push
+
+═════════════════════════════════════════════════════════════════════════════════
