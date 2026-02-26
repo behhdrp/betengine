@@ -1,4 +1,3 @@
-import { VercelRequest, VercelResponse } from "@vercel/node";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -21,6 +20,4 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(distPath, "index.html"));
 });
 
-export default (req: VercelRequest, res: VercelResponse) => {
-  return app(req, res);
-};
+export default app;
