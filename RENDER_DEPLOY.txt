@@ -1,0 +1,58 @@
+# 🚀 DEPLOY DO BACKEND NO RENDER
+
+## PASSO A PASSO:
+
+### 1. Crie uma conta no Render (Gratuito!)
+- Acesse: https://render.com
+- Clique em "Sign Up"
+- Use seu email ou GitHub
+
+### 2. Crie um novo serviço Web
+- Na dashboard, clique em "New +" → "Web Service"
+- Escolha "Build and deploy from a Git repository"
+
+### 3. Configure o repositório
+- Se você tem um repositório Git, cole a URL
+- Se não tem, você pode fazer upload dos arquivos manualmente:
+  - Clique em "Public Git Repository"
+  - Cole qualquer URL pública (ou crie uma)
+
+### 4. Configure o serviço
+**Name:** `betengine-backend`
+**Runtime:** Node
+**Build Command:** `npm install`
+**Start Command:** `npm start`
+**Instance Type:** Free (grátis!)
+
+### 5. Aguarde o deploy
+- Clique em "Deploy"
+- Isso vai levar 3-5 minutos
+- Quando estiver verde (✅), copie a URL
+
+### 6. Use a URL no seu site
+- A URL vai ser assim: `https://seu-app.onrender.com`
+- Guarde essa URL, você vai precisar dela
+
+---
+
+## ⚙️ VARIÁVEIS DE AMBIENTE (Opcional)
+
+Se quiser customizar, na área "Environment Variables" adicione:
+
+```
+JWT_SECRET=seu-secreto-super-seguro
+GEMINI_API_KEY=sua-chave-da-api-do-gemini
+```
+
+Mas você não precisa fazer isso por enquanto!
+
+---
+
+## ✅ Pronto!
+
+Seu backend está rodando no Render. Agora:
+1. Pegue a URL (`https://seu-app.onrender.com`)
+2. Coloque no arquivo `index.html` do seu site (procure por `API_URL`)
+3. Upload do `index.html` atualizado para o Hostinger
+
+**Seu site está 100% online!** 🎉

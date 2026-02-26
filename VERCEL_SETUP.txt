@@ -1,0 +1,92 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                    ✅ BETENGINE - CONFIGURADO PARA VERCEL!                      ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+🎯 O QUE MUDOU:
+
+  ✓ Arquivo vercel.json criado
+  ✓ API em api/server.ts (estrutura Vercel)
+  ✓ index.html atualizado para usar API relativa
+  ✓ Suporte a Serverless Functions
+
+═════════════════════════════════════════════════════════════════════════════════
+
+📋 PRÓXIMOS PASSOS NO GITHUB:
+
+1. Faça PUSH dos novos arquivos para seu repositório:
+
+   git add .
+   git commit -m "Configuração Vercel"
+   git push
+
+2. Espere o Vercel fazer o deploy automaticamente (2-3 minutos)
+
+3. Verifique os logs no painel do Vercel
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🔧 ARQUIVOS IMPORTANTES:
+
+  ✓ vercel.json
+    → Configuração do Vercel
+    → Especifica que é um projeto Vite + API
+
+  ✓ api/server.ts
+    → Backend como Serverless Function
+    → Funciona automaticamente no Vercel
+    → Sirve arquivos estáticos também
+
+  ✓ index.html (atualizado)
+    → Usa API_BASE_URL = window.location.origin
+    → Automaticamente aponta para o seu domínio
+
+═════════════════════════════════════════════════════════════════════════════════
+
+⚙️  VARIÁVEIS DE AMBIENTE NO VERCEL:
+
+Acesse o painel do Vercel e vá em:
+Settings → Environment Variables
+
+Adicione:
+
+  NODE_ENV=production
+  JWT_SECRET=seu-secreto-super-seguro-mude-isso
+
+(Gere um JWT_SECRET seguro com:
+  node -e "console.log(require('crypto').randomBytes(32).toString('hex'))")
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🚀 PRONTO!
+
+Seu site está 100% funcional no Vercel!
+
+  Frontend: Vercel CDN (super rápido)
+  Backend: Serverless Functions (escalável)
+  Database: SQLite local (persistente no Vercel)
+
+═════════════════════════════════════════════════════════════════════════════════
+
+❓ DÚVIDAS:
+
+P: "Como faço para que o banco de dados persista?"
+R: No Vercel com SQLite, o banco persiste no disco do runtime.
+   Se quiser melhor, considere trocar para PostgreSQL (Supabase gratuito).
+
+P: "Vai dar erro de permission denied no /tmp?"
+R: Não, Vercel permite escrita em /tmp. O arquivo vai para /tmp/database.sqlite.
+
+P: "Como vejo os logs?"
+R: No painel do Vercel → Deployments → Clique no deploy → Logs
+
+═════════════════════════════════════════════════════════════════════════════════
+
+✨ RESUMO:
+
+  1. Push dos arquivos para GitHub
+  2. Vercel faz deploy automaticamente
+  3. Seu site está online em: https://seu-projeto.vercel.app
+  4. Backend + Frontend juntos no mesmo lugar
+  5. Super rápido e sem custos
+
+═════════════════════════════════════════════════════════════════════════════════

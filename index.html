@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Betengine - Dashboard</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- CONFIGURAÇÃO DA API -->
+    <!-- Vercel: Use URL relativa (automaticamente aponta para o mesmo domínio) -->
+    <!-- Localhost: Descomente a linha abaixo -->
+    <script>
+      // Para Vercel/Produção: deixe como '' (URL relativa)
+      // Para localhost: descomente a linha abaixo:
+      // window.API_BASE_URL = 'http://localhost:5173';
+      
+      window.API_BASE_URL = window.location.origin;
+    </script>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

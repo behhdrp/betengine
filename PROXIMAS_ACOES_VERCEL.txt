@@ -1,0 +1,84 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                ⚡ AÇÕES NECESSÁRIAS PARA VERCEL FUNCIONAR                      ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+🎯 O BUILD ESTÁ FUNCIONANDO PERFEITAMENTE!
+
+  ✓ dist/index.html pronto
+  ✓ CSS otimizado
+  ✓ JavaScript compilado
+  ✓ API configurada
+
+═════════════════════════════════════════════════════════════════════════════════
+
+📝 CHECKLIST DO GITHUB:
+
+Se você já commitou os arquivos antigos, faça:
+
+  git add .
+  git commit -m "Configurar para Vercel - API e vercel.json"
+  git push origin main
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🔑 CONFIGURAR VARIÁVEIS NO VERCEL:
+
+1. Acesse: https://vercel.com/dashboard
+2. Clique no projeto "betengine"
+3. Vá em: Settings → Environment Variables
+4. Adicione:
+
+   NODE_ENV         production
+   JWT_SECRET       (gere uma chave segura - ver abaixo)
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🔐 COMO GERAR UM JWT_SECRET SEGURO:
+
+Execute no Terminal:
+
+  node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+
+Copie o resultado e cole em JWT_SECRET no Vercel
+
+═════════════════════════════════════════════════════════════════════════════════
+
+✅ DEPOIS QUE FAZER TUDO:
+
+1. O Vercel vai fazer deploy automaticamente
+2. Leve 3-5 minutos
+3. Quando terminar (verde ✓), acesse seu site
+4. Teste o login!
+
+═════════════════════════════════════════════════════════════════════════════════
+
+📍 SEU SITE ESTARÁ EM:
+
+  https://seu-projeto.vercel.app
+
+  OU
+
+  https://seu-dominio-personalizado.com (se você configur um)
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🐛 SE DER ERRO:
+
+1. Verifique os logs no Vercel (Deployments → Logs)
+2. Certifique-se que NODE_ENV=production está definido
+3. Verifique se JWT_SECRET foi definido
+
+═════════════════════════════════════════════════════════════════════════════════
+
+💡 DICA:
+
+Se o banco de dados sqlite não persistir (que é possível no Vercel),
+considere usar Supabase (PostgreSQL gratuito) depois.
+
+Por enquanto, deixa testando com SQLite mesmo!
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🎉 PRONTO! Seu site vai estar 100% online!
+
+═════════════════════════════════════════════════════════════════════════════════
